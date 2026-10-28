@@ -144,10 +144,3 @@ nrb-system/
 
 See `docs/TESTING.md` for the test cases and `docs/screenshots/` for the evidence.
 
-## 8. Submission checklist
-
-- [ ] Push the source code to Git (never commit `.env`)
-- [ ] Add **Mwamvani** as a collaborator on the repository
-- [ ] Email the Git URL, SQL script, documentation and screenshots to mkaunde2@gmail.com
-- [ ] Send the real `.env` values (database user and password) by email only, not in Git, screenshots or reports
-# NRB-assignment

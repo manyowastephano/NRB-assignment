@@ -39,7 +39,7 @@ function page_header(string $title, string $active = ''): void
   <aside class="sidebar" id="sidebar">
     <div class="brand">
       <span class="brand-mark">NRB</span>
-      <span class="brand-text">National ID<br>Registration<small>National Registration Bureau, Malawi</small></span>
+      
     </div>
     <nav class="side-nav" aria-label="Main navigation">
       <span class="nav-label">Staff menu</span>
@@ -132,7 +132,7 @@ function public_footer(): void
 {
     ?>
 </main>
-<footer class="pub-footer">National Registration Bureau, Malawi &middot; CIS-DMS-421 Individual Assignment &middot; Fictional data only</footer>
+<footer class="pub-footer">National Registration Bureau, Malawi &middot;</footer>
 <script src="assets/js/app.js"></script>
 </body>
 </html>

@@ -243,4 +243,24 @@ public_header('Apply for a National ID', 'apply');
   <div class="actions"><button type="submit" class="btn">Submit application</button><a class="btn btn-secondary" href="index.php">Cancel</a></div>
 </form>
 </div>
+<style>#citizen-fields[hidden], #foreign-fields[hidden] { display: none !important; }</style>
+<script>
+(function () {
+  var citizen = document.getElementById('citizen-fields');
+  var foreign = document.getElementById('foreign-fields');
+  var radios  = document.querySelectorAll('input[name="category"]');
+  function setSection(box, show) {
+    box.hidden = !show;
+    box.style.display = show ? '' : 'none';
+    box.querySelectorAll('input, select').forEach(function (el) { el.disabled = !show; });
+  }
+  function sync() {
+    var isForeign = document.querySelector('input[name="category"][value="Foreign resident"]').checked;
+    setSection(citizen, !isForeign);
+    setSection(foreign, isForeign);
+  }
+  radios.forEach(function (r) { r.addEventListener('change', sync); });
+  sync();
+})();
+</script>
 <?php public_footer();
